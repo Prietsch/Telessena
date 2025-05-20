@@ -26,9 +26,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  border-bottom: 2px solid #444;
+  padding: 10px 40px; /* mais espaço vertical e lateral */
+  min-height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
+
 
 .logo img {
   height: 45px;
@@ -109,9 +111,11 @@ footer {
     margin-top: 10px;
   }
 
-  .logo img {
-    height: 40px;
-  }
+.logo img {
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px gold); /* opcional */
+}
 
   .secao {
     padding: 40px 15px;
