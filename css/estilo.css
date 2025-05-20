@@ -82,6 +82,11 @@ img {
   box-shadow: 0 0 15px #ffcc00;
 }
 
+img.logo {
+  max-width: 100%;
+  height: auto;
+  display: block; /* evita espaçamento embaixo da imagem */
+}
 
 footer {
   background: #000;
