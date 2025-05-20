@@ -1,1 +1,102 @@
-section {min-height: 100vh;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Russo One', sans-serif;
+  background-color: #111;
+  color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+.menu-sticky {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  height: 60px;
+}
+
+.menu-sticky nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.menu-sticky nav a:hover {
+  color: #ff0000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.secao {
+  min-height: 100vh;
+  padding: 40px 20px;
+  scroll-margin-top: 60px;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.secao2 {
+  background-color: #1a1a1a;
+}
+
+.secao2 .conteudo {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-sticky {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .secao2 .conteudo {
+    padding: 0 10px;
+  }
+}
