@@ -37,9 +37,11 @@ header.menu-sticky {
 }
 
 /* Logo */
+
 .logo img {
   max-height: 50px;
   width: auto;
+  box-shadow: none; /* remove o brilho da logo */
 }
 
 /* NAV */
