@@ -36,14 +36,6 @@ header.menu-sticky {
   box-shadow: 0 2px 5px rgba(255,204,0,0.5);
 }
 
-/* Logo */
-
-.logo img {
-  max-height: 50px;
-  width: auto;
-  box-shadow: none; /* remove o brilho da logo */
-}
-
 /* NAV */
 nav {
   display: flex;
@@ -77,6 +69,14 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+/* Logo */
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+  box-shadow: none; /* remove o brilho da logo */
+}
+
 /* SECTIONS */
 .secao {
   min-height: 100vh; /* uma tela cheia */
