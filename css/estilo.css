@@ -83,12 +83,13 @@ img {
 }
 
 .logo {
-  max-width: 150px;
-  width: 30%;
+  max-width: 150px;   /* tamanho máximo da logo em telas grandes */
+  width: 20vw;        /* largura relativa: 20% da largura da viewport */
+  min-width: 100px;   /* largura mínima para não ficar muito pequena */
 }
 
 .logo img {
-  width: 30%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -108,9 +109,10 @@ footer {
     text-align: center;
   }
 
-  @media (max-width: 480px) {
+@media (max-width: 600px) {
   .logo {
-    max-width: 100px;
+    width: 40vw;  /* aumenta a logo em telas muito pequenas para ficar visível */
+    max-width: none;
   }
 }
 
