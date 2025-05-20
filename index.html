@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minha Página</title>
-    <link rel="stylesheet" href="estilo.css" />
-  </head>
-  <body>
-    <header class="menu-sticky">
-      <div class="logo">Minha Logo</div>
-      <nav>
-        <a href="#sessao1">Sessão 1</a>
-        <a href="#sessao2">Sessão 2</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Responsivo com Flexbox</title>
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <main>
-      <section id="sessao1" class="secao">
-        <h1>Bem-vindo</h1>
-        <p>Conteúdo da primeira sessão com imagem e texto.</p>
-        <img src="img/exemplo1.jpg" alt="Imagem ilustrativa" />
-      </section>
+  <!-- Cabeçalho com Menu Sticky -->
+  <header class="menu-sticky">
+    <div class="logo">Minha Logo</div>
+    <nav>
+      <a href="#sessao1">Sessão 1</a>
+      <a href="#sessao2">Sessão 2</a>
+    </nav>
+  </header>
 
-      <section id="sessao2" class="secao secao2">
-        <h2>Sobre o Projeto</h2>
-        <p>Conteúdo da segunda sessão, com layout diferente da anterior.</p>
-        <img src="img/exemplo2.jpg" alt="Outra imagem" />
-      </section>
-    </main>
+  <!-- Sessão 1 -->
+  <section id="sessao1" class="secao">
+    <h1>Seção 1 - Destaque</h1>
+    <p>Conteúdo da primeira seção. Pode incluir uma imagem e texto explicativo.</p>
+    <img src="../img/imagem1.jpg" alt="Imagem de destaque" />
+  </section>
 
-    <footer>
-      <p>&copy; 2025 - Rafaela Prietsch</p>
-    </footer>
-  </body>
+  <!-- Sessão 2 -->
+  <section id="sessao2" class="secao secao2">
+    <div>
+      <h2>Seção 2 - Sobre</h2>
+      <p>Esta seção tem estrutura diferente da anterior, com layout flexível.</p>
+      <img src="../img/imagem2.jpg" alt="Imagem sobre" />
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 - Rafaela Prietsch</p>
+  </footer>
+
+</body>
 </html>
