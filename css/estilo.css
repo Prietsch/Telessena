@@ -1,84 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
+/* Reset básico e box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+/* Fonte e corpo */
+body {
   font-family: 'Russo One', sans-serif;
   background-color: #111;
-  color: #f1f1f1;
-  overflow-x: hidden;
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-/* HEADER */
-header {
+/* Header sticky */
+.menu-sticky {
   position: sticky;
   top: 0;
   background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   z-index: 1000;
-  height: 70px;
+  box-shadow: 0 2px 6px rgba(255, 204, 0, 0.8);
+  height: 60px;
 }
 
+/* Logo */
 .logo img {
-  height: 50px;
-  filter: drop-shadow(0 0 5px #ffcc00);
-  transition: transform 0.3s ease;
+  max-height: 40px;
+  width: auto;
   cursor: pointer;
 }
 
-.logo img:hover {
-  transform: scale(1.1);
-}
-
+/* Nav */
 nav {
   display: flex;
   gap: 25px;
 }
 
 nav a {
-  color: #fff;
+  color: #eee;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   background-color: #ffcc00;
   color: #000;
+  outline: none;
 }
 
-/* MAIN e SEÇÕES */
+/* Main e seções */
 main {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-/* SEÇÃO 1 - cinza médio */
+/* Cada seção ocupa ao menos uma viewport menos o header */
 .secao {
-  min-height: calc(100vh - 70px); /* altura da viewport menos o header */
+  min-height: calc(100vh - 60px);
   padding: 40px 20px;
-  scroll-margin-top: 80px; /* para o scroll não ficar grudado no header */
+  scroll-margin-top: 70px; /* Espaço para header fixo */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
+  background-color: #222;
 }
 
+.secao h1,
+.secao h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Seção 1 - Layout simples, imagem abaixo do texto */
 #banda {
-  background-color: #444; /* cinza médio */
+  background-color: #333;
 }
 
 #banda h1 {
@@ -87,66 +95,67 @@ main {
 }
 
 #banda p {
+  max-width: 600px;
   font-size: 1.2rem;
-  max-width: 700px;
   margin-bottom: 30px;
 }
 
 #banda img {
   max-width: 90%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 25px #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffcc00;
 }
 
-/* SEÇÃO 2 - cinza mais escuro */
-#discografia {
-  background-color: #222; /* cinza escuro */
+/* Seção 2 - Layout com texto à esquerda e imagem à direita */
+.secao2 {
+  background-color: #111;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
   padding-bottom: 60px;
 }
 
-#discografia .conteudo {
+.secao2 .conteudo {
+  flex: 1 1 300px;
   max-width: 600px;
-  color: #f1f1f1;
+  color: #eee;
+  text-align: left;
 }
 
-#discografia h2 {
-  font-size: 2.5rem;
+.secao2 h2 {
+  font-size: 2.4rem;
   margin-bottom: 20px;
+  text-align: left;
 }
 
-#discografia p {
+.secao2 p {
   font-size: 1.15rem;
   margin-bottom: 20px;
 }
 
-#discografia ul {
-  list-style: none;
+.secao2 ul {
+  list-style: disc inside;
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  line-height: 1.5;
+  margin-bottom: 25px;
 }
 
-#discografia ul li {
-  margin-bottom: 10px;
-}
-
-#discografia img {
+.secao2 img {
+  flex: 1 1 300px;
   max-width: 400px;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 25px #ffcc00;
-  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffcc00;
 }
 
-/* RODAPÉ */
+/* Footer */
 footer {
   background-color: #000;
-  color: #fff;
+  color: #eee;
   text-align: center;
   padding: 20px 10px;
   font-size: 1rem;
@@ -154,35 +163,45 @@ footer {
 }
 
 /* RESPONSIVIDADE */
+
+/* Mobile até 768px */
 @media (max-width: 768px) {
-  header {
+  .menu-sticky {
     flex-direction: column;
     height: auto;
     padding: 15px 20px;
+    gap: 10px;
   }
 
   nav {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 12px;
   }
 
-  #discografia {
+  .secao2 {
     flex-direction: column;
     padding-bottom: 40px;
   }
 
-  #discografia img {
+  .secao2 .conteudo,
+  .secao2 img {
     max-width: 90%;
+    flex-basis: auto;
     margin: 0 auto;
-    box-shadow: 0 0 20px #ffcc00;
+    text-align: center;
+  }
+
+  .secao2 h2,
+  .secao2 p,
+  .secao2 ul {
+    text-align: center;
   }
 
   #banda h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
-  #discografia h2 {
+  .secao2 h2 {
     font-size: 2rem;
   }
 }
