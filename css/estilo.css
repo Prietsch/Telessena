@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,40 +13,58 @@ body {
   overflow-x: hidden;
 }
 
-.menu-sticky {
+/* Cabeçalho e menu sticky */
+header {
   position: sticky;
   top: 0;
   background-color: #000;
-  color: white;
-  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 30px;
   z-index: 1000;
-  height: 60px;
 }
 
-.menu-sticky nav a {
+.logo img {
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #ffcc00);
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Menu */
+nav {
+  display: flex;
+}
+
+nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin-left: 20px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.menu-sticky nav a:hover {
+nav a:hover {
   color: #ffcc00;
 }
 
+/* Estrutura 1 coluna principal */
 main {
   display: flex;
   flex-direction: column;
 }
 
-.secao {
+/* Sessão 1 */
+.secao1 {
   min-height: 100vh;
+  background-color: #1b1b1b;
   padding: 40px 20px;
   scroll-margin-top: 60px;
-  background-color: #1b1b1b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,35 +72,51 @@ main {
   text-align: center;
 }
 
-.secao2 {
-  background-color: #2b2b2b;
+.secao1 h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.secao2 .conteudo {
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-ul {
-  list-style: none;
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-img {
+.secao1 img {
   max-width: 90%;
   height: auto;
-  margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px #ffcc00;
 }
 
+/* Sessão 2 - layout diferente */
+.secao2 {
+  min-height: 100vh;
+  background-color: #2b2b2b;
+  padding: 40px 20px;
+  scroll-margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.secao2 .conteudo {
+  max-width: 600px;
+  margin: 20px;
+}
+
+.secao2 h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.secao2 img {
+  max-width: 400px;
+  height: auto;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+/* Rodapé */
 footer {
   background: #000;
   color: white;
@@ -90,24 +126,22 @@ footer {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .menu-sticky {
+  header {
     flex-direction: column;
-    height: auto;
     text-align: center;
   }
 
-  .secao2 .conteudo {
-    padding: 0 10px;
+  nav {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
-}
 
-.logo img {
-  height: 60px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px #ffcc00); /* brilho dourado */
-  transition: transform 0.3s ease;
-}
+  .secao2 {
+    flex-direction: column;
+  }
 
-.logo img:hover {
-  transform: scale(1.05); /* efeito leve ao passar o mouse */
+  .secao2 img {
+    max-width: 90%;
+  }
 }
