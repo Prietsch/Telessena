@@ -108,6 +108,12 @@ footer {
     text-align: center;
   }
 
+  @media (max-width: 480px) {
+  .logo {
+    max-width: 100px;
+  }
+}
+
   .secao2 .conteudo {
     padding: 0 10px;
   }
