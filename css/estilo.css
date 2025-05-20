@@ -83,9 +83,14 @@ img {
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 150px;
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
   height: auto;
-  display: block; /* evita espaçamento embaixo da imagem */
+  display: block;
 }
 
 footer {
