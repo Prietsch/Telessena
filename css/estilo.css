@@ -11,14 +11,6 @@ html, body {
   background: #000;
   color: #fff;
   scroll-behavior: smooth;
-
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Body vira flex column para empurrar footer para baixo */
-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -73,7 +65,6 @@ nav a:focus {
 }
 
 /* SECTIONS */
-
 .secao {
   min-height: 100vh; /* uma tela cheia */
   display: flex;
@@ -105,10 +96,13 @@ nav a:focus {
 }
 
 #banda img {
-  max-width: 80%;
+  max-width: 60%;
+  max-height: 350px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px #ffcc00;
+  margin: 20px auto 0 auto;
+  display: block;
 }
 
 /* section 2 - #discografia */
@@ -156,11 +150,13 @@ nav a:focus {
 }
 
 .secao2 img {
-  max-width: 80%;
+  max-width: 60%;
+  max-height: 350px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px #ffcc00;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
+  display: block;
 }
 
 /* FOOTER */
@@ -196,6 +192,12 @@ footer {
   .secao2 ul {
     max-width: 100%;
   }
+
+  #banda img,
+  .secao2 img {
+    max-width: 90%;
+    max-height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -208,5 +210,11 @@ footer {
   nav {
     flex-direction: column;
     gap: 8px;
+  }
+
+  #banda img,
+  .secao2 img {
+    max-width: 100%;
+    max-height: 180px;
   }
 }
