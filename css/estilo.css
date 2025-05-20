@@ -63,7 +63,18 @@ nav a:focus {
   color: #000;
   outline: none;
 }
-
+/* Estilo geral para todas as imagens */
+img {
+  width: 90%;
+  max-width: 400px; /* limite máximo menor para reduzir tamanho */
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ffcc00;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* SECTIONS */
 .secao {
   min-height: 100vh; /* uma tela cheia */
